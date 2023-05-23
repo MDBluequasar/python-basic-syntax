@@ -135,3 +135,80 @@ date = a[0:8]
 day = a[8:]
 print(date)
 print(day)
+
+# 문자열 포맷팅이란 문자열 중간에 특정 문자(또는 숫자 등)를 삽입하는 방식
+#  %s : 문자열, %d : 정수, %f : 실수
+a = "I studied %s %d" % ("python", 2)
+print(a)
+
+# 포맷팅을 왜 쓰는가?
+# 1)문자열을 직접 삽입하면 1회성으로 coding 할 수 밖에 없지만 포맷팅은 변수값을 삽입할 수 있다.
+# 2)따옴표를 여러번 안닫아도 된다.
+language = input("좋아하는 언어를 입력하세요.")
+times = input("그 언어를 몇번이나 공부하셨나요.")
+a = "I studied %s very hard %d times" % (language, int(times)) # %d는 %s로 변경하면 int 함수를 사용하지 않아도 된다.
+print(a) # 실행 중지는 ctrl + C
+
+# 아래와 같이 코딩하면 따옴료로 열고 닫고를 반복하게 된다. 
+times = 2
+a = "I studied python " + str(times) + " times"
+print(a)
+
+# 예제 3
+# my age is XX, and weight is XX kg의 문장에서 "나이가 몇살이신가요?" "뭄무게가 몇킬로그햄이신가요?" 를 입력한 후
+# 결과값을 출력하시오.
+
+age = int(input("나이가 몇살이신가요?"))
+weight = float(input("몸무게가 몇킬로그램이신가요?"))
+q = "my age is %d, and weight is %f kg" % (age, weight) 
+print(q) 
+
+# 문자열 관련 주요 함수
+# count : 대상 문자열에 지정한 문자가 몇개가 있는 출력하는 함수
+a = "python"
+print(a.count('o'))
+
+# find : 대상 문자열에 지정한 문자가 몇번 index에 있는 찾는 함수
+print(a.find('o'))
+print(a.index('o'))
+
+# 없는 문자를 찾을 때는 -1 return
+print(a.find('x'))
+
+# 예시
+whatyouwant = input("문자를 입력해주세요")
+search = input("찾고자 하는 문자 1개만 입력해주세요")
+result = whatyouwant.find(search)
+if result == -1:
+    print("찾고자 하는 값이 없습니다.")
+else:
+   print("요청하신 문자는 %d 번째에 있습니다. " % result)
+
+# 대소문자 변경 : upper() / lower()
+# 대문자 변경
+a = "hello"
+print(a.upper())
+
+# 소문자 변경
+b = "HELLO"
+print(b.lower())
+
+# 문자열 양쪽 공백을 없는 함수 : strip()
+a = "   hello word   "
+print(a.strip())
+
+# 문자열 대체 : replace()
+a = 'I studied python'
+print(a.replace('python', 'java'))
+
+# 공백을 기준으로 문자를 자르는 함수 : spilt()
+a = 'i    studied    python'
+b = a.split()
+c = a.split(" ")
+print(b) # 결과값 ['i', 'studied', 'python']
+print(c) # 결과값 ['i', '', '', '', 'studied', '', '', '', 'python']
+
+a = 'i:studied:python'
+c = a.split(":")
+print(c)
+
