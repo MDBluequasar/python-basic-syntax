@@ -8,15 +8,14 @@ print(a/b)
 print(a//b)
 print(a%b)
 
-# 자료의 형변환
-# 숫자 -> 문자
-c = 10
-d = 20
-# 결과값이 1020이 나오도록 덧셈을 하여라
-answer = str(c) + str(d)
-print(answer)
+# 제곱, 제곱근
+# 2의 10 제곱을 출력하라
+print(2**10)
+print(pow(2,10)) <- #python 내장함수
 
-# 실수 -> 정수
-e = 23333.3333
-# e를 정수로 바뀌어라
-print(int(e))
+# 1024의 제곱근을 구하라
+import math # python에 내장되지 않은 함수
+print(math.pow(2,10))
+
+# 제곱근은 math라는 라이브러리를 import해줘야한다.
+print(math.sqrt(1024))
