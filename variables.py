@@ -212,3 +212,14 @@ a = 'i:studied:python'
 c = a.split(":")
 print(c)
 
+# 예제 4
+# 3개의 단어를 키보드로 입력 받아 각 단어의 첫글자를 추출 후 단어의 약자를 출력하라.
+# <조건1> 각 단어 변수 (word1, word2, word3)
+# <조건2> 입력과 출력 구분선 : 문자열 연산
+# <조건3> 각 변수의 첫 단어만 추출하여 변수(abbr) 저장
+
+first =  input("첫번째 단어를 입력해주세요")
+second = input("두번째 단어를 입력해주세요")
+third = input("세번째 단어를 입력해주세요")
+addr = first[0] + second[0] + third[0]
+print(addr)
