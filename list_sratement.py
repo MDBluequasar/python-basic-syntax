@@ -136,4 +136,27 @@ print(listc.index('김철수'))
 # list 마지막 요소 끄집어 내기 : pop()
 # listc.pop()
 # remove and return last value
-print(listc.pop())
+
+listc.pop()
+lastvalue = listc.pop()
+print(lastvalue) # 최종적으로 print(listc.pop()) 으로 쓸 수 있다.
+
+# 문자 리스트를 문자열로 만들기
+listv = ['hello', 'python', 'world']
+sta = "hello python world"
+st1 = ""
+st2 = st1.join(listv)
+print(st2)
+
+listv = ['hello', 'python', 'world']
+st1 = ""
+for a in listv:
+    t = st1 + a
+print(t)
+
+# 문자열을 문자 리스트로 만들기
+sta = "hello python world"
+mysta1 = list[sta]
+mysta2 = sta.split()
+print(mysta1)
+print(mysta2)
