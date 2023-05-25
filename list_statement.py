@@ -160,3 +160,21 @@ mysta1 = list[sta]
 mysta2 = sta.split()
 print(mysta1)
 print(mysta2)
+
+# 문자열 뒤집기
+# 방법 1
+my_string = 'jaron'
+st = list(my_string)
+st.reverse()
+answer = ''.join(st)
+
+# 방법 2
+my_string = 'jaron'
+print(my_string[::-1])
+
+# 방법 3
+my_string = 'jaron'
+answer = "".join(reversed(my_string))
+
+
+
