@@ -56,9 +56,17 @@ print(s1)
 
 # set 값 삭제 시 remove 함수 사용
 s1 = set({1,2,3,4,5,6})
-s1.remove(4)
-s1.discard(6)
+# discard : remove와의 차이점은 삭제할 값이 존배하지 않아도 error가 발생하지 않음.
+s1.remove(4) # 방법1
+s1.discard(6) # 방법2
 print(s1)
+
+# boolean(불형) type
+# in (또는 not in) 뒤에 iterable한 자료형이 나온다.
+# a in list, a not in list, a in dictionary, a in set
+
+# 비어있는 값들은 거짓, 값이 들어있으면 참 
+
 
 
 
