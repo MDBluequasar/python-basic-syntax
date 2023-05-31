@@ -123,11 +123,10 @@ def test2(n):
 result = test2(10)
 print(result)
 
-
 # 재귀함수를 반드시 써야만 하는 상황
 # 반복의 획수를 알 수 없을 때
 
-#예제
+# 예제 (재귀함수 아님)
 # 다섯 개의 숫자 중에 2개씩 숫자를 추출하는 경우의 수를 구하고자 한다.
 # 2개씩 숫자를 추출하여 list에 담아 마지막에 모든 텍스트를 추력하도록 하여라.
 lista = [34,15,7,7,1]
@@ -136,7 +135,23 @@ lst = []
 for a in range(len(lista)):
     for b in range(a+1, len(lista)):
         lst.append([lista[a], lista[b]])
-
 print(lst)
 
+# 조합의 재귀함수 만들기
+
+def recur(lista, total_list, temp_list, n, m):
+    if m == 0:
+        total_list.append(temp_list[:])
+        return
+    for a in range(n, len(lista)):
+        temp_list.append(lista[a])
+        recur(lista, total_list, temp_list, a+1, m-1) # a+1는 증가하는 값.
+        temp_list.pop
+
+
+input1 = [10,20,30,40,50]
+total_list = []
+input2 = 3
+recur(input1, total_list, [], 0, input2)
+print(total_list)
 
