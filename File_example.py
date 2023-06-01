@@ -85,3 +85,20 @@ for dir in dirList:
         print(fullPath)
 
 # 모든 폴더까지 검색
+
+
+def searchRecur(searchDir):
+    dirList = os.listdir(searchDir)
+    if not dirList:
+        return
+    for dir in dirList:
+        filename = os.path.join(searchDir, dir)
+        if os.path.isdir(filename):
+            searchRecur(filename)
+        dirTuple = os.path.splitext(dir)
+        if(dirTuple[1]=='.py'):
+            fullPath = os.path.join(searchDir, dir)
+            print(fullPath)
+
+searchDir = r'C:\Users\User\Desktop\궁둥박사'
+searchRecur(searchDir)
