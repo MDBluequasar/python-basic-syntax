@@ -177,4 +177,20 @@ my_string = 'jaron'
 answer = "".join(reversed(my_string))
 
 
+####### 헷갈리는 것
+num_list = [2, 3, 4, 5]
+for a in range(len(num_list)):
+    print(a) # 0 1 2 3
+
+for a in range(len(num_list)):
+    print(num_list) # [2, 3, 4, 5] [2, 3, 4, 5] [2, 3, 4, 5] [2, 3, 4, 5] len = 4개라서 4번 반복
+
+for a in range(len(num_list)):
+    print(num_list[a]) # 2 3 4 5
+
+for a in num_list:
+    print(a) # 2 3 4 5
+
+# for a in range(num_list):
+#     print(a)  # range(변수)는 print 되지 않는다
 
