@@ -206,3 +206,12 @@ listb = [10, 20, 30]
 # maxa = lista[len(lista)-1]
 # maxa = lista[-1]
 # print(maxa)
+
+
+'''문자와 숫자가 포함된 값에서 숫자만 뽑아내기'''
+my_string = "aAb1B2cC34oOp"
+
+for i in my_string:
+    if i.isdigit():
+        print(i)
+# isdigit 함수를 이용하면 문자와 숫자가 포함된 값에서 숫자만 뽑아낼 수 있다.
